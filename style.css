@@ -1,0 +1,393 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    /*bg color*/
+    --Very_Dar_Blue: hsl(216, 12%, 8%);
+    /* box color */
+    --Dark_Blue: hsl(213, 19%, 18%);
+    /* bg star  */
+    --Medium_Grey: hsl(216, 12%, 54%);
+    /* sub_header */
+    --Light_Grey: hsl(217, 12%, 70%);
+
+    /* hover */
+    --Orange: hsl(25, 97%, 53%);
+
+    /* you_selected... */
+    --Light_Grey_edit: hsla(217, 12%, 70%, 0.2);
+
+}
+
+/* Google Font :400,700:font-family: 'Overpass', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+.attribution{
+    background-color: var(--Very_Dar_Blue);
+    color: white;
+
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* พื้นหลัง */
+.bg {
+    width: 100%;
+
+    height: 100vh;
+
+    background-color: var(--Very_Dar_Blue);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* ตัวกล่อง */
+.box {
+    width: 23rem;
+
+    height: 22rem;
+
+
+    background-color: var(--Dark_Blue);
+
+
+
+    border-radius: 1rem;
+}
+
+.star_icon {
+    background-color: var(--Medium_Grey);
+    height: 2rem;
+    width: 2rem;
+
+    border-radius: 50%;
+
+    background-image: url(./images/icon-star.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    /* margin: 2rem 2rem; */
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+
+}
+
+.header {
+    color: white;
+
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+
+    margin-left: 2rem;
+}
+
+.sub_header {
+    color: var(--Light_Grey);
+
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+
+    width: 20rem;
+    height: auto;
+}
+
+.radio {
+    display: flex;
+    column-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* เอาปุ่มออกไป */
+.radio input {
+    display: none;
+}
+
+/* ใช้labelเป็นปุ่มแทนตัวradio button */
+.radio label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--Medium_Grey);
+    border-radius: 50%;
+
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 20px;
+
+    /* ค่อยๆเปลี่ยน....ใน0.3วิ */
+    transition: 0.3s;
+
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn1 {
+    text-decoration: none;
+
+
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 17px;
+
+    background-color: var(--Orange);
+
+    cursor: pointer;
+
+    margin: 1rem 0rem;
+
+    padding: 8px 8rem;
+
+    border-radius: 1rem;
+
+    border-style: none;
+
+    transition: 0.3s;
+
+}
+
+#btn1:focus {
+    background-color: white;
+    color: orangered;
+}
+
+
+
+/* hover */
+/* ถ้าเอาเมาส์ไว้วาง */
+.radio label:hover {
+    background-color: var(--Light_Grey);
+}
+
+/* if checkeding */
+/*  ถ้ากดแล้ว */
+.radio input:checked+label {
+    background-color: var(--Orange);
+}
+
+/*--------------------- หน้า thankyou.html ---------------------*/
+
+.data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.thankyou_img {
+    margin-block-start: 3rem;
+    margin-block-end: 2rem;
+}
+
+.you_score {
+    font-family: 'Overpass', sans-serif;
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--Orange);
+    text-align: center;
+
+    border-radius: 1rem;
+    background-color: var(--Light_Grey_edit);
+
+    padding-block: .25rem;
+    padding-inline: 1rem;
+}
+
+.header_thankyou {
+    color: white;
+
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-block: .5rem;
+}
+
+.sub_header_thankyou {
+    color: var(--Light_Grey);
+
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+
+
+    width: 20rem;
+}
+
+/*moblie version*/
+@media screen and (max-width: 340px) {
+
+    /* กว้างไม่เกิน */
+    .attribution{
+        font-size: .7rem;
+    }
+    .box {
+        /* width: 23rem;
+    
+        height: 22rem; */
+        width: 16rem;
+
+        height: 15rem;
+    }
+
+    .star_icon {
+        height: 1.5rem;
+        width: 1.5rem;
+
+        margin-top: 1.5rem;
+        margin-bottom: .5rem;
+    }
+
+    .header {
+        font-size: .7rem;
+    }
+
+    .sub_header {
+        font-size: .5rem;
+
+
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+
+        width: 14rem;
+    }
+
+    .radio label {
+        width: 2rem;
+        height: 2rem;
+
+        font-size: 1rem;
+    }
+    #btn1{
+        padding: 5px 5rem;
+
+        font-size: 13px;
+    }
+
+    /*--------------------- หน้า thankyou.html ---------------------*/
+
+    .thankyou_img{
+        height: auto;
+        width: 40%;
+
+        margin-block-start: 2rem;
+        margin-block-end: 1rem;
+    }
+    .you_score{
+        
+    }
+
+    .header_thankyou{
+        font-size: 1.5rem;
+    }
+    .sub_header_thankyou{
+        font-size: .5rem;
+        width: 14rem;
+
+    }
+
+}
+@media screen and (min-width: 1024px){
+    /* กว้างเกิน */
+    .box {
+        /* width: 23rem;
+    
+        height: 22rem; */
+        width:33rem;
+
+        height: 32rem;
+    }
+
+    .star_icon {
+        height: 3rem;
+        width: 3rem;
+
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+
+        background-size: 60%;
+    }
+
+    .header {
+        font-size: 1.5rem;
+    }
+
+    .sub_header {
+        font-size: 1.4rem;
+
+
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+
+        width: 29rem;
+    }
+
+
+
+    .radio{
+        column-gap: 2rem;
+    }
+
+    .radio label {
+        width: 4rem;
+        height: 4rem;
+
+        font-size: 2rem;
+    }
+    #btn1{
+        padding: 14px 12rem;
+
+        font-size: 27px;
+
+        margin: 1.5rem 0rem;
+    }
+
+    /*--------------------- หน้า thankyou.html ---------------------*/
+
+    .thankyou_img{
+        height: auto;
+        width: 50%;
+
+        margin-block-start: 3rem;
+        margin-block-end: 2rem;
+    }
+    .you_score{
+        font-size: 1.6rem;
+    }
+
+    .header_thankyou{
+        font-size: 3rem;
+        margin-block: 1rem;
+    }
+    .sub_header_thankyou{
+        font-size: 1.3rem;
+        width: 30rem;
+
+    }
+}
